@@ -1,0 +1,19 @@
+Batch request expected results
+--------------------------------------------------------------------------------------------------------------------------------
+
+1. Import postman collection
+
+2. Call listAllBreweries API 
+	-> it should return an empty object as nothing has been added yet
+	
+3. Call postBatchCreate4Update1 API 
+	-> it should create 4 breweries and update brewery with ID 1
+	
+4. Call listAllBreweries API 
+	-> it should return an object with the elements described in 3.
+	
+5. Call postBatchDelete2 API 
+	-> it should delete 2 breweries with IDs 2 and 3
+	
+6. Call listAllBreweries API 
+	-> it should return an object with 2 breweries of ID 1 and 4 (ID 2 and 3 were deleted in step 5.)

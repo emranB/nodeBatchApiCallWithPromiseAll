@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "b342489b-3198-4063-9ce6-0b4da970987c",
+		"name": "PicThrive",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25445214"
+	},
+	"item": [
+		{
+			"name": "getBatchProcess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/brewery/batch/process",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brewery",
+						"batch",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBrewery",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test_name_1",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "test_city",
+							"type": "text"
+						},
+						{
+							"key": "street",
+							"value": "test_street",
+							"type": "text"
+						},
+						{
+							"key": "isOpen",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/brewery",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brewery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postBatchCreate4Update1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "testHeader",
+						"value": "th1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requests\": [\r\n        {\r\n            \"action\": \"add_brewery\",\r\n            \"method\": \"put\",\r\n            \"endpoint\": \"http://localhost:3000/brewery\",\r\n            \"body\": {\r\n                \"name\": \"Test_Brewery_1\",\r\n                \"city\": \"Test_City_1\",\r\n                \"street\": \"Test_Street_1\",\r\n                \"isOpen\": true\r\n            }\r\n        },\r\n        {\r\n            \"action\": \"add_brewery\",\r\n            \"method\": \"put\",\r\n            \"endpoint\": \"http://localhost:3000/brewery\",\r\n            \"body\": {\r\n                \"name\": \"Test_Brewery_2\",\r\n                \"city\": \"Test_City_2\",\r\n                \"street\": \"Test_Street_2\",\r\n                \"isOpen\": false\r\n            }\r\n        },\r\n        {\r\n            \"action\": \"add_brewery\",\r\n            \"method\": \"put\",\r\n            \"endpoint\": \"http://localhost:3000/brewery\",\r\n            \"body\": {\r\n                \"name\": \"Test_Brewery_3\",\r\n                \"city\": \"Test_City_3\",\r\n                \"street\": \"Test_Street_3\",\r\n                \"isOpen\": true\r\n            }\r\n        },\r\n        {\r\n            \"action\": \"add_brewery\",\r\n            \"method\": \"put\",\r\n            \"endpoint\": \"http://localhost:3000/brewery\",\r\n            \"body\": {\r\n                \"name\": \"Test_Brewery_4\",\r\n                \"city\": \"Test_City_4\",\r\n                \"street\": \"Test_Street_4\",\r\n                \"isOpen\": true\r\n            }\r\n        },\r\n\r\n        {\r\n            \"action\": \"update_brewery\",\r\n            \"method\": \"post\",\r\n            \"endpoint\": \"http://localhost:3000/brewery/1\",\r\n            \"body\": {\r\n                \"id\": \"1\",\r\n                \"city\": \"Test_Updated_City_1\",\r\n                \"street\": \"Test_Updated_Street_1\"\r\n            }\r\n        }\r\n\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/brewery/batch/process",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brewery",
+						"batch",
+						"process"
+					],
+					"query": [
+						{
+							"key": "test_query_1",
+							"value": "tq1",
+							"disabled": true
+						},
+						{
+							"key": "test_query_2",
+							"value": "tq2",
+							"disabled": true
+						},
+						{
+							"key": "test_query_3",
+							"value": "tq3",
+							"disabled": true
+						},
+						{
+							"key": "test2",
+							"value": "t2",
+							"disabled": true
+						},
+						{
+							"key": "test3",
+							"value": "t3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postBatchDelete2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requests\": [\r\n        {\r\n            \"action\": \"delete_brewery\",\r\n            \"method\": \"delete\",\r\n            \"endpoint\": \"http://localhost:3000/brewery/2\"\r\n        },\r\n        {\r\n            \"action\": \"delete_brewery\",\r\n            \"method\": \"delete\",\r\n            \"endpoint\": \"http://localhost:3000/brewery/3\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/brewery/batch/process",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brewery",
+						"batch",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAllBreweries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/brewery/list/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brewery",
+						"list",
+						"all"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

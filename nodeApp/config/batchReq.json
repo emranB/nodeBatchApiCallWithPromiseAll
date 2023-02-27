@@ -1,0 +1,60 @@
+{
+    "requests": [
+        {
+            "action": "add_brewery",
+            "method": "put",
+            "endpoint": "http://localhost:3000/brewery",
+            "body": {
+                "name": "Test_Brewery_1",
+                "city": "Test_City_1",
+                "street": "Test_Street_1",
+                "isOpen": true
+            }
+        },
+        {
+            "action": "add_brewery",
+            "method": "put",
+            "endpoint": "http://localhost:3000/brewery",
+            "body": {
+                "name": "Test_Brewery_2",
+                "city": "Test_City_2",
+                "street": "Test_Street_2",
+                "isOpen": false
+            }
+        },
+        {
+            "action": "add_brewery",
+            "method": "put",
+            "endpoint": "http://localhost:3000/brewery",
+            "body": {
+                "name": "Test_Brewery_3",
+                "city": "Test_City_3",
+                "street": "Test_Street_3",
+                "isOpen": true
+            }
+        },
+        {
+            "action": "add_brewery",
+            "method": "put",
+            "endpoint": "http://localhost:3000/brewery",
+            "body": {
+                "name": "Test_Brewery_4",
+                "city": "Test_City_4",
+                "street": "Test_Street_4",
+                "isOpen": true
+            }
+        },
+
+        {
+            "action": "update_brewery",
+            "method": "post",
+            "endpoint": "http://localhost:3000/brewery/1",
+            "body": {
+                "id": "1",
+                "city": "Test_Updated_City_1",
+                "street": "Test_Updated_Street_1"
+            }
+        }
+
+    ]
+}
